@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="#-features"><img src="https://img.shields.io/badge/Status-Active-success.svg?style=flat-square" alt="Status"></a>
+  <a href="https://github.com/otmane-el-aloi/imposter/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/otmane-el-aloi/imposter/ci.yml?branch=main&label=CI&style=flat-square" alt="CI Status"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.9+-3776AB.svg?style=flat-square&logo=python&logoColor=white" alt="Python 3.9+"></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.110+-009688.svg?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"></a>
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18-61DAFB.svg?style=flat-square&logo=react&logoColor=black" alt="React 18"></a>
@@ -232,8 +233,10 @@ New JSON files placed in `backend/words/` will automatically be loaded by the se
 ---
 
 ## 🤝 Contributing
+ 
+Contributions are welcome! Whether it's adding custom word packs, enhancing procedural sound effects, or refining gameplay mechanics, we'd love your help.
 
-Contributions are welcome! If you'd like to help improve Imposter:
+Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before getting started.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/awesome-feature`)
