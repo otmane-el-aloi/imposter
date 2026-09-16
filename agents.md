@@ -48,10 +48,18 @@ imposter/
 │   ├── test_game_flow.py        # Automated multiplayer loop & anti-cheat wire sanitization test
 │   ├── test_bot_gameplay.py     # Automated Dev Bot creation, auto-turns, and voting test
 │   └── test_settings.py         # Automated test for clue rounds before voting & timer settings
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml               # GitHub Actions CI matrix (Python 3.10-3.12, Node 18-20, Docker build)
+│   │   └── release.yml          # Standalone binary release packaging on tags
+│   ├── ISSUE_TEMPLATE/          # Issue templates (bug reports, feature requests, word packs)
+│   └── pull_request_template.md # PR checklist with anti-cheat & offline verification
 ├── run.sh                       # One-click launch script (builds client if needed + starts FastAPI)
 ├── build_standalone.sh          # One-click script to build single 16MB executable with PyInstaller
 ├── Dockerfile                   # Multi-stage production container build (for Render, Fly.io, Railway)
 ├── pyproject.toml               # Poetry dependencies (FastAPI, Uvicorn, Pydantic, QRCode, PyInstaller)
+├── CONTRIBUTING.md              # Contributor onboarding, architecture rules & testing guide
+├── CODE_OF_CONDUCT.md           # Contributor Covenant Code of Conduct v2.1
 └── README.md                    # User quickstart
 ```
 
