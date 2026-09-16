@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Rubik', 'Trebuchet MS', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0c0f17;
+    color: #f8fafc;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Halftone / Comic Dot Grid Background */
+.bg-halftone {
+  background-color: #0c0f17;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Comic Danger Stripes */
+.bg-hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffe600,
+    #ffe600 12px,
+    #000000 12px,
+    #000000 24px
+  );
+}
+
+.bg-danger-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff2e63,
+    #ff2e63 12px,
+    #000000 12px,
+    #000000 24px
+  );
+}
+
+/* Neo-Pop 3D Boxes & Panels */
+.neo-box {
+  background-color: #171b26;
+  border: 3px solid #000000;
+  box-shadow: 0 5px 0 #000000;
+  border-radius: 1.25rem;
+}
+
+.neo-box-light {
+  background-color: #f8f9fc;
+  color: #0c0f17;
+  border: 3px solid #000000;
+  box-shadow: 0 5px 0 #000000;
+  border-radius: 1.25rem;
+}
+
+/* Neo-Pop 3D Isometric Tactile Buttons */
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid #000000;
+  border-radius: 1rem;
+  box-shadow: 0 5px 0 #000000;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.1s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.neo-btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #000000;
+}
+
+.neo-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: 0 3px 0 #000000;
+  transform: none;
+}
+
+/* Button Color Variants */
+.neo-btn-yellow {
+  background-color: #ffe600;
+  color: #000000;
+}
+.neo-btn-yellow:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.neo-btn-red {
+  background-color: #ff2e63;
+  color: #ffffff;
+}
+.neo-btn-red:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.neo-btn-cyan {
+  background-color: #00f0ff;
+  color: #000000;
+}
+.neo-btn-cyan:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.neo-btn-lime {
+  background-color: #00e676;
+  color: #000000;
+}
+.neo-btn-lime:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.neo-btn-dark {
+  background-color: #232838;
+  color: #ffffff;
+}
+.neo-btn-dark:hover:not(:disabled) {
+  background-color: #2b3245;
+}
+
+/* Comic Speech Bubble with Pointed Tail */
+.comic-bubble {
+  position: relative;
+  background: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 0 5px 0 #000000;
+  border-radius: 1.25rem;
+}
+
+.comic-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 32px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 12px 0 0;
+  border-color: #ffffff transparent transparent transparent;
+  filter: drop-shadow(0 3px 0 #000000);
+}
+
+/* Floating Reactions Animation */
+@keyframes floatUpFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.5) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -10px) scale(1.2) rotate(var(--rot, 0deg));
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--drift, 0px)), -180px) scale(0.85) rotate(calc(var(--rot, 0deg) * 1.5));
+  }
+}
+
+.animate-float-reaction {
+  animation: floatUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}

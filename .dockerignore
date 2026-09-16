@@ -1,0 +1,7 @@
+.venv
+client/node_modules
+client/dist
+__pycache__
+*.pyc
+.git
+tests

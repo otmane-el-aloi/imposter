@@ -1,0 +1,32 @@
+# Python & Virtualenv
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Frontend / Node
+client/node_modules/
+client/dist/
+
+# Build & Standalone PyInstaller outputs
+build/
+dist/
+.pyinstaller_cache/
+*.spec
+
+# OS & Editor files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.*
+!.env.example
